@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cricket Forum</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/write.css' />
+</head>
+
+<body>
+  <div class="bg">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/post">Post</a>
+      <a href="/reviews">Reviews</a>
+    </nav>
+    <div id="overlay">
+      <div id="modal">
+          <form action="/submit"method="post">
+              <input type="text"id = "taskName"placeholder = "Name"name = "name">
+              <br>
+              <textarea name="review" id="taskDetails"placeholder = "Write your review"></textarea>
+              <button id="taskDone">
+                  Submit
+              </button>
+          </form>
+      </div>  
+    </div>
+  </div>
+</body>
+
+</html>

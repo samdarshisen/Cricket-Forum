@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cricket Forum</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/read.css' />
+</head>
+
+<body>
+    <div class="bg">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/post">Post</a>
+            <a href="/reviews">Reviews</a>
+        </nav>
+        <div id="top">
+            <div id="overlay">
+
+            </div>
+        </div>
+        <div id="container">
+            <h2>Recent Reviews</h2>
+            <br>
+            <% data.forEach(function(item){ %>
+       
+            <div class="card">
+                <h3><%= item.name%></h3>
+                <br>
+                <p><%= item.review%></p>
+                <a href="/update/<%= item._id%>"><button id="update">Update</button></a>
+                <a href="/delete/<%= item._id%>"><button id="delete">Delete</button></a>
+            </div>
+        <%})%>
+        </div>
+    </div>
+</body>
+
+</html>
